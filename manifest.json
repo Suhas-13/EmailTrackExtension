@@ -1,0 +1,20 @@
+
+
+
+{
+  "name": "Track emails when opened by Suhas Hariharan",
+  "version": "1",
+  "manifest_version": 2,
+  "background": {
+    "scripts":["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/mail/u/*/*"],
+      "js": ["savepixel.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
