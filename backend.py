@@ -36,7 +36,7 @@ def home():
         with open('dictionary.txt', 'w+') as file:
                 file.write(json.dumps(t))
             
-        dbx = dropbox.Dropbox("")
+        dbx = dropbox.Dropbox(dropboxkey)
         dbx.files_upload(open("dictionary.txt","rb").read(),"/dictionary.txt",mode=dropbox.files.WriteMode.overwrite)
     elif open("logpixel.txt").read().count(request.args.get("id")) == 1:
       
@@ -50,7 +50,7 @@ def home():
             with open("bannedpixel.txt","a+") as f:
                 f.writelines((request.args.get("id")) + "\n")
             
-            dbx = dropbox.Dropbox("")
+            dbx = dropbox.Dropbox(dropboxkey)
 
             dbx.files_upload(open("logpixel.txt","rb").read(),"/logpixel.txt",mode=dropbox.files.WriteMode.overwrite)
             dbx.files_upload(open("bannedpixel.txt","rb").read(),"/bannedpixel.txt",mode=dropbox.files.WriteMode.overwrite)
