@@ -4,14 +4,15 @@ import os
 import time
 import dropbox
 import json
-
+dropboxkey=""
 notify = Notify()
-notify.endpoint=""
+notifyendpoint=""
+notify.endpoint=notifyendpoint
 notify.write_config()
 
 from flask import Flask,request
 maindictionary={}
-dbx = dropbox.Dropbox("")
+dbx = dropbox.Dropbox(dropboxkey)
 dbx.files_download_to_file("bannedpixel.txt","/bannedpixel.txt")
 dbx.files_download_to_file("logpixel.txt","/logpixel.txt")
 dbx.files_download_to_file("dictionary.txt","/dictionary.txt")
