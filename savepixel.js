@@ -1,9 +1,8 @@
 
 
 
-function myFunction() {
-	   // your code here
-  pixelbutton=document.createElement("button")
+function addButton() {
+ pixelbutton=document.createElement("button")
 pixelbutton.textContent="Add tracker"
 pixelbutton.onclick = function() {  var x = document.getElementsByClassName("gmail_signature")[0];
 var img = document.createElement("img");
@@ -23,11 +22,11 @@ chrome.runtime.onMessage.addListener(
 
     	if (request.url.search("compose=new") > -1) {
     		if (request.url.search("mail") > -1) {
-    			      myFunction();// 
+    			      addButton();// 
     			  }
     	else if (request.url.search("#inbox/") > -1) {
 
-    		myFunction();
+    		addButton();
     		}
     	}
     	}
