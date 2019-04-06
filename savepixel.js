@@ -7,7 +7,8 @@ pixelbutton.textContent="Add tracker"
 pixelbutton.onclick = function() {  var x = document.getElementsByClassName("gmail_signature")[0];
 var img = document.createElement("img");
 var emaillist = document.getElementsByClassName("vT")[0].textContent
-img.src="" +   Math.floor(100000 + Math.random() * 90000000000).toString() + "&email=" + emaillist.toString() + "&subject="+document.getElementsByClassName("aYF")[0].textContent.toString()
+var serverurl=""
+img.src=serverurl + "?email=" +   Math.floor(100000 + Math.random() * 90000000000).toString() + "&email=" + emaillist.toString() + "&subject="+document.getElementsByClassName("aYF")[0].textContent.toString()
 img.hidden="True"
 x.appendChild(img);
 }
