@@ -17,7 +17,7 @@ Copy the URL there and open it on all devices you wish to get notifications on, 
 
 Put the URL as equal to the variable "notifyendpoint" in the backend.py
 
-Run the backend.py on a server, make sure it is portforwarded, grab the URL to that server including the port, put it in savepixel.js as equal to the serverurl.
+Run the backend.py script on a server backend, make sure it is portforwarded, grab the URL to that server including the port, put it in savepixel.js as equal to the serverurl.
 
 Put the files manifest.json, savepixel.js and background.js into a folder, next go to chrome://extensions on your chrome browser, make sure Developer is turned on in the top right hand corner.
 
